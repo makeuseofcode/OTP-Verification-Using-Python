@@ -44,7 +44,7 @@ class OTPVerification:
         self.timer_thread.start()
 
     def timer_countdown(self):
-        start_time = time.time(
+        start_time = time.time()
         while True:
             current_time = time.time()
             elapsed_time = current_time - start_time
@@ -95,7 +95,7 @@ class OTPVerification:
         self.otp = random.randint(1000, 9999)
         message = client.messages.create(
             body=f'Your OTP is {self.otp}.',
-            from_='+15418738798',
+            from_='TWILIO_MOBILE_NUMBER',
             to=mobile_number
         )
         messagebox.showinfo('OTP Sent', f'New OTP has been sent to {mobile_number}.')
