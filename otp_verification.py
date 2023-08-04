@@ -22,21 +22,48 @@ class OTPVerification:
         self.locked = False
         self.stop_timer = False
 
-        self.label1 = tk.Label(self.master, text='Enter your mobile number:',font=('Arial', 14))
+        self.label1 = tk.Label(self.master, 
+                               text='Enter your mobile number:',
+                               font=('Arial', 14))
         self.label1.pack()
-        self.mobile_number_entry = tk.Entry(self.master, width=20,font=('Arial', 14))
+        
+        self.mobile_number_entry = tk.Entry(self.master, 
+                                            width=20,
+                                            font=('Arial', 14))
         self.mobile_number_entry.pack()
-        self.send_otp_button = tk.Button(self.master, text='Send OTP', command=self.send_otp,font=('Arial', 14))
+        
+        self.send_otp_button = tk.Button(self.master, 
+                                         text='Send OTP', 
+                                         command=self.send_otp,
+                                         font=('Arial', 14))
         self.send_otp_button.pack()
-        self.timer_label = tk.Label(self.master, text='', font=('Arial', 12, 'bold'))
+        
+        self.timer_label = tk.Label(self.master, 
+                                    text='', 
+                                    font=('Arial', 12, 'bold'))
         self.timer_label.pack()
-        self.resend_otp_button = tk.Button(self.master, text='Resend OTP', state=tk.DISABLED, command=self.resend_otp,font=('Arial', 14))
+        
+        self.resend_otp_button = tk.Button(self.master, 
+                                           text='Resend OTP', 
+                                           state=tk.DISABLED, 
+                                           command=self.resend_otp,
+                                           font=('Arial', 14))
         self.resend_otp_button.pack()
-        self.label2 = tk.Label(self.master, text='Enter OTP sent to your mobile:',font=('Arial', 14))
+        
+        self.label2 = tk.Label(self.master, 
+                               text='Enter OTP sent to your mobile:',
+                               font=('Arial', 14))
         self.label2.pack()
-        self.otp_entry = tk.Entry(self.master, width=20,font=('Arial', 14))
+        
+        self.otp_entry = tk.Entry(self.master, 
+                                  width=20,
+                                  font=('Arial', 14))
         self.otp_entry.pack()
-        self.verify_otp_button = tk.Button(self.master, text='Verify OTP', command=self.verify_otp,font=('Arial', 14))
+        
+        self.verify_otp_button = tk.Button(self.master, 
+                                           text='Verify OTP', 
+                                           command=self.verify_otp,
+                                           font=('Arial', 14))
         self.verify_otp_button.pack()
 
     def start_timer(self):
